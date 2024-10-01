@@ -1,0 +1,79 @@
+alright, i am looking to make a game. The premise of the game is to be closley related to the game (or similar style) of the oregon trail. In this game, the user is trying to get form point a to point b, but many unexpected things can happen on the way. the game allows for you to make decision and those decisions can either end up being benificial, or negativley impact your success in the game. I want to make the same game but this one will be about golf. for example, you start on hole one and you have the option to drive to drive 275 yards to the green (over a lake) or you can layup and play it safe with a 7 iron. the user will get the option to chose from one of these. The user may only have a 40% chance of being successful with the iron, but the reward is a lot better. The 7 iron could have a 90% success rate for laying up, but lower reward. Another example, the user is 10 yards from the green. they can either use a wedge and chip on, or they can texas wedge (put it) to the green. the ball may end up closer with the wedge in a best case senario (50% likley) but the user could also hit it over the green and be in a worse spot. If they chose to put, they could have a 10% chance og going in the hole, 10% chance of duffing it and hitting it 4 feet, or they have a 80% chance of hitting it okay and be on the green, but 10ft from the hole. Choosing clubs is only one example of playing the game.
+
+Because this is golf, and the audience i am seeking out is more college to men in their 20s, I would like to add a lot more fun stuff. So the choosing club is one decision point, but there can be so many more. For example, on hole 6 your friend asks if you would like to take a shot, the shot could either loosen you up and give you more strength in your shot, or you could get nauseous from the shot and your strength goes down and you cant hit too far. another one could be, you are on the turn (between hole 9 and 10) and you have the option to buy a triple IPA, or you could buy a gatorade. each could have potential good or bad things that could happen to you. maybe your boss calls and you choose to answer or not. Maybe you have the optiojn to pee in the bushes or in a porta potty, if you go in the bushes maybe you find a ball. All of these decisions will affect the users STATS. the stats might look something like this:
+
+Health, Alcohol level, Confidence, amount of balls (starting amount, goes down or up depending if you find balls or loose them), high level (weed), etc (more to come here). each decission will affect one of these stats. some can be strategically planned to ensure you do good, other things might happen to you as you get very unlucky. Each one of these stats will affect how you play and what type of things might happen to you. For example, if youre guy becomes too drunk (between 80-100) maybe you invovle the risk of passing out and loosing the game. if your health is very low (0-30) maybe you swing very weak. if it is very high (70-100) you can hit it super far. we need different levels. 
+
+Now that you get the general idea of the game, i want to figure out the best way to structure this. I think the first big thing will be to determine attributes and starting points. I think it would be fun to be able to choose different characters, and each character has different attributes and is affected differently (we can get to that later, for now we can start with the basics). from there we need a long list of different decissions / questions the user is going to be asked. each one of these decisions will have different probabilities of things happening. for example, choosing a putter of a wedge - this question can be asked if you are within 1-20 yards away from the putitng green. the options are (putt (goes in: 10%, shanks it: 10% (only gets it 2 yards closer), 80% chance you hit a deacent shot and it goes within 10 feet of the hole). the second option is the user decides to use a wedge. this is a slightly harder club to hit, but the reward is higher. 30% chance going in 40% chance going within 5 feet of the hole, and 30% chance you hit it over the green and are 20 yards out from the other side.
+
+so first we want to build out that part of the game. you know how many yards out you are, you get the decission on what club to hit, each decission has different odds of what happens to you. for example, we dont want the user to be asked if he should hit his putter or his wedge on the tee box at 250 yards out. that should only be asked in a given yardage scenario form the hole. 
+
+We will also want to build out the course. a few par threes, mostly par fours, and some par 5s. we want to take each club and give it a hititng distance (driver, woods, irons, wedges, putter) in future state, these distances can go up or down depending on your STATS. for now its best to play this game lineary. ex: 250 feet from hole. first shot: 30 feet from hole. second shot: bad shot now -20 feet from hole (other side of hole, we wont actually want to call this negative more likley will say: " you put too much power into the ball and hit it over the green by 20 yards " .
+
+Once we have this built out, we will want to start implementing the fun stuff, weird scenarios, funny decissions, and fun stats. I want this to be a website and am using visual studio code for this. i was thinking sng html, css, and js. we will want to keep  the style of buttons, colors, fontss, etc sould be handled in one file, logic should be handled in one, or mulitple files, then html and ui in one or moore files. 
+
+The name of the game is fairway frontier. please first start by askiing 10 questions of what you think is important to know for staring this game.
+ChatGPT
+Memory updated
+Great idea for a game! Here are ten questions to help clarify the initial setup and requirements for "Fairway Frontier":
+
+Game Mechanics and Flow:
+
+How many holes will the game have in total?
+Will there be a fixed sequence of events, or will events be randomized each time?
+Character Attributes:
+
+What are the starting values for each character attribute (Health, Alcohol level, Confidence, etc.)?
+How will different characters' attributes affect gameplay? Will there be predefined characters with unique attributes?
+Club and Shot Mechanics:
+
+What are the exact distances and probabilities for each club's success or failure for different scenarios?
+How will we handle different terrain types (fairway, rough, sand, etc.) and their impact on shot outcomes?
+Decision Scenarios:
+
+Can you provide a list of example scenarios and their outcomes, including probabilities and stat changes?
+How will we balance the frequency and impact of decision scenarios to ensure a fun and challenging game?
+Stat Management:
+
+What are the thresholds for stats that trigger significant gameplay changes (e.g., passing out from alcohol)?
+How will players be informed of their current stats, and how often will these be updated?
+Event Types and Randomness:
+
+What types of random events will occur, and how will they be integrated into the gameplay?
+How will you ensure that random events are balanced and add to the fun without being too frustrating?
+Course Design:
+
+What is the layout of the golf course (number of par 3s, par 4s, par 5s)?
+How will different holes be designed to present unique challenges and decision points?
+UI/UX Design:
+
+How will the user interface be structured to display the course, stats, and decision prompts clearly?
+What style and theme do you envision for the game’s UI to appeal to the target audience?
+Development Structure:
+
+How will you organize the codebase (separate files for UI, logic, styles)?
+What version control system will you use to manage and track changes during development?
+Future Expansions and Updates:
+
+What are your plans for future updates or expansions to the game (e.g., new courses, additional scenarios)?
+How will you gather feedback from players to improve and expand the game?
+Answering these questions will provide a solid foundation for starting development and ensure that you have a clear vision and plan for "Fairway Frontier."
+
+
+2 / 2
+
+User
+1. we will want t have a 9 hole and an 18 hole option. right now les focus on building out 9 holes, but imprtant to know that at some point we will want another option fo 18, even diffret golf courses. the events should def be randomized. we will want a steady game: for example, you play each hole in order and arent jumping around holes or yards out, but the questions asked and chances of what happened should be somewhat random (within constraints < which is KEY to making this work)
+2. this will vary, we will want at some point to have multiple characters to choose form and they can have different starting attributes (like most games) but for now we can keep it simple. Maybe 15 balls, 100 health, 50 confidence, 0 alcohol, and we will def need to keep track of what hole we are on and our strokes (score) in the game. health, confidence, and alcohol should all be out of 100. we will want to add more in the future so keep that in mind.
+3. For these shots we will want to have a standard range for each (maybe give some approx ranges for each club that we can always edit) maybe for now that distance within the range is equally randomized, so for example if youre pitching wedge range is 100-120, it as equal odds to fall within any of those if hit correctly. but maybe we have a certain percent chance that you chunk it and it goes a quarter of the distance, and maybe there is a small chance you crush the ball and you hit over the max. we need to think like this. we dont want the game to feel too stagnant. almost like anything can happen! (but not really)
+4. scenarios: what club to hit, weather or not to get beer or water between holes, answering a phone call from your boss, maybe we have some weather that comes in and makes it harder to hit, etc. there can be hundreds of scenarios like this, that we will want to have affect the player accordingly. Frequency should be random, but we also dont want the user thinking the same thing is happening over and over again....
+5. we will need to put some placeholders in now and we can always adjust in the future. there should be live stats that are ALWAYS shown at the bottom/middle of the screen. I can provide a picture of how i wantit to look in a bit.
+6. random events is pretty much scenarios (i think these are the same) we just have normal scenarios like what club to hit based on distance, weather, etc.) but we can have fun ones too: pee in bushes or porta potty, boss calls and you decide if you want to answer or not, you catch your friend cheating, do you say anything about it, etc, etc.
+7. for the 9 holes lets do 2 par 3s, 2 par 5s, and 5 par 4s. this should be randomized once by you for implementing the code, once we randomize the order of these holes, we will keep them the same so users experience the same game cource, and not chagning every time. yes, each hole will have different stuff like trees, bunkers, ponds, etc.
+8. I was thinking there will be a text box area: this describes game, scenarios, what is happening, etc. below there will be 2 buttons for choosing what to do. example: putt or wedge. then below that we should see our stats and score and hole (these are constantly changing). more to come on theme, but we can always have the html refering to buttons and fonts, that can easily be changed in CSS file.
+9. i am not an expert in web design, but i think its important to handle things in seperate files to make things easier to find and more organized. CSS, HTML, and JS should be seperate. the amount of each file depends on how we want to structure / best practices.
+10. yes, and no feedback from now, just from friends who i share with.
+
+Now that we have this, please give a structured break down of where to start, how to organize files, etc, etc. next steps, etc.
+
+important to note, i want this game to be scalable, so if i think of more characters, courses, stats, decissions, scenarios, etc in the future i want to be able to add more / edit exisiting

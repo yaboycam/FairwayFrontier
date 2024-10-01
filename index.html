@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fairway Frontier</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Fairway Frontier</h1>
+        </header>
+        <div class="card">
+            <div id="header-info">
+                <div id="club-info">
+                    <h2>Clubs</h2>
+                    <div id="club-columns">
+                        <div id="club-column-1" class="club-column"></div>
+                        <div id="club-column-2" class="club-column"></div>
+                    </div>
+                </div>
+                <div id="course-info">
+                    <h2>Course Info</h2>
+                    <p>Course: Course 1</p>
+                    <p>Hole: <span id="hole-number">1</span></p>
+                    <p>Strokes: <span id="stroke-count">0</span></p>
+                </div>
+                <div id="stats">
+                    <h2>Player Stats</h2>
+                    <p>Health: <span id="health">100</span></p>
+                    <p>Alcohol Level: <span id="alcohol">0</span></p>
+                    <p>Weed Level: <span id="weed">0</span></p>
+                    <p>Balls: <span id="balls">10</span></p>
+                    <p>Confidence: <span id="confidence">50</span></p>
+                </div>
+            </div>
+            <div id="course-representation"></div>
+            <div id="legend">
+                <h2>Legend</h2>
+                <div id="legend-columns">
+                    <div id="legend-column-1" class="legend-column">
+                        <p><span class="legend-color" style="background-color: white;"></span> Tee Box</p>
+                        <p><span class="legend-color" style="background-color: #90EE90;"></span> Fairway</p>
+                        <p><span class="legend-color" style="background-color: #006400;"></span> Rough</p>
+                        <p><span class="legend-color" style="background-color: #1E90FF;"></span> Water</p>
+                    </div>
+                    <div id="legend-column-2" class="legend-column">
+                        <p><span class="legend-color" style="background-color: #F4A460;"></span> Sand</p>
+                        <p><span class="legend-color" style="background-color: #32CD32;"></span> Green</p>
+                        <p><span class="legend-color" style="background-color: #FFD700;"></span> Hole</p>
+                        <p><span class="legend-color" style="background-color: #FF0000;"></span> Ball</p>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <section id="situation">
+                    <h2>Situation</h2>
+                    <p id="result-text"></p>
+                    <p id="situation-text"></p>
+                </section>
+                <section id="options">
+                    <h2>Choose Your Club</h2>
+                    <!-- Options will be dynamically added here -->
+                </section>
+                <section id="power-control">
+                    <label for="power-slider">Shot Power:</label>
+                    <input type="range" id="power-slider" min="1" max="100" value="100">
+                    <span id="power-value">100%</span>
+                </section>
+            </main>
+            <footer>
+                <h2>Scorecard</h2>
+                <table id="scorecard">
+                    <thead>
+                        <tr>
+                            <th>Hole</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Yardage</th>
+                            <td id="hole1-yardage">450</td>
+                            <td id="hole2-yardage">160</td>
+                            <td id="hole3-yardage">390</td>
+                            <td id="hole4-yardage">490</td>
+                            <td id="hole5-yardage">370</td>
+                            <td id="hole6-yardage">170</td>
+                            <td id="hole7-yardage">380</td>
+                            <td id="hole8-yardage">530</td>
+                            <td id="hole9-yardage">420</td>
+                        </tr>
+                        <tr>
+                            <th>Par</th>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>Score</th>
+                            <td id="hole1-strokes"></td>
+                            <td id="hole2-strokes"></td>
+                            <td id="hole3-strokes"></td>
+                            <td id="hole4-strokes"></td>
+                            <td id="hole5-strokes"></td>
+                            <td id="hole6-strokes"></td>
+                            <td id="hole7-strokes"></td>
+                            <td id="hole8-strokes"></td>
+                            <td id="hole9-strokes"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
+
+
+
+

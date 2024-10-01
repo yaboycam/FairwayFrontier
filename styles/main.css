@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+#game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #212121;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#header-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#header-info > div {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+#club-info h2,
+#course-info h2,
+#stats h2,
+#legend h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#club-columns,
+#legend-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.club-column,
+.legend-column {
+    flex: 1;
+}
+
+#course-representation {
+    position: relative;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.segment {
+    height: 100%;
+}
+
+.segment.teebox { background-color: white; }
+.segment.fairway { background-color: #90EE90; }
+.segment.rough { background-color: #006400; }
+.segment.water { background-color: #1E90FF; }
+.segment.sand { background-color: #F4A460; }
+.segment.green { background-color: #32CD32; }
+.segment.hole {
+    background-color: #FFD700;
+    position: absolute;
+    height: 100%;
+}
+.segment.ball {
+    background-color: #FF0000;
+    position: absolute;
+    height: 100%;
+}
+
+main {
+    margin: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#situation {
+    text-align: center;
+}
+
+#options {
+    text-align: center;
+}
+
+.option-button {
+    font-family: inherit;
+    border: none;
+    background: hsl(0deg 0% 75%);
+    box-shadow: inset -1px -1px #292929, inset 1px 1px #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.option-button:active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #292929;
+}
+
+#power-control {
+    text-align: center;
+}
+
+#power-slider {
+    width: 80%;
+    margin-top: 10px;
+}
+
+#power-value {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#scorecard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#scorecard th, #scorecard td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+#scorecard th {
+    background-color: #444;
+}
+
+#scorecard td {
+    background-color: #333;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    #header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header-info > div {
+        margin: 10px 0;
+    }
+
+    #club-columns,
+    #legend-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .club-column,
+    .legend-column {
+        margin-bottom: 10px;
+    }
+
+    #power-slider {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
